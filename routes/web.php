@@ -24,12 +24,10 @@ Route::group(['namespace' => 'Frontend'], function () {
 
 Route::group(['namespace' => 'Backend'], function () {
 	Route::resource('dashboard', 'DashboardController');
+	Route::resource('pendidikan', 'PendidikanController');
+	Route::resource('pengalaman_kerja', 'PengalamanKerjaController');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('admin/profile', function () {
-	return view('backend.dashboard');
-})->middleware('auth');
