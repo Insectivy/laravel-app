@@ -31,6 +31,7 @@ Setup environment
 ```bash
   cp .env.example .env
   php artisan key:generate
+  php artisan migrate
 ```
 
 Start the server
